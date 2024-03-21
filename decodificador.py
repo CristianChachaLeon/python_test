@@ -3,11 +3,7 @@ import math
 def decodificador(numero):
     array_leds=[] 
     rango_sup=int(math.log2(numero))
-    # 16 -> 4 bits 32 -> 5 bits 33 -> 6 bits 
-    # 16 -> 2^4  32 -> 2^5  33 -> 2^6
-    # 2^4 = 16 
-    # log2(2^4) = log2(16) 
-    # 4 = log2(16)
+
     for x in range(0,rango_sup+1):  
         impar = numero % 2
         array_leds.append(impar)
@@ -20,12 +16,15 @@ def decodificador(numero):
 print("Decodificador")
 
 #numero = int(input("Ingrese un numero: "))
-
-for x in range(1,100): 
+rango_max=50
+for x in range(1,rango_max): 
     numero= x
     print("numero de entrada: ",end="")
     print(numero)
     array_leds=decodificador(numero)
+    print("Numero de espacios para imprimir")
+    formato=int(math.log2(rango_max))
+    print(formato)
     print(array_leds[::-1])
 
     #array ['a','b','c','d']ç
