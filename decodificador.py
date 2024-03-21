@@ -13,7 +13,7 @@ print("Decodificador")
 
 #numero = int(input("Ingrese un numero: "))
 
-for x in range(0,10):
+for x in range(0,16):
     numero= x
     print("numero de entrada: ",end="")
     print(numero)
