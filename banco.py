@@ -42,12 +42,16 @@ while(1):
                 case 1:
                     print("Saldo: ",saldo)
                 case 2:
-                    cantidad=int(input("Cantidad de dinero a retirar"))
-                    setSaldo(nombre, saldo-cantidad)
-                    print("Saldo actual: ",getSaldo(nombre))
+                    cantidad=int(input("Cantidad de dinero a retirar:"))
+                    if ( saldo - cantidad >= 0) :
+                        setSaldo(nombre, saldo-cantidad)
+                        print("Saldo actual: ",getSaldo(nombre))
+                    else:
+                        print("Saldo insuficiente, saldo actual:",getSaldo(nombre))
                 case 3:
-                    
-                    print("Cantidad de dinero a ingresar")
+                    cantidad=int(input("Cantidad de dinero a ingresar:"))
+                    setSaldo(nombre, saldo+cantidad)
+                    print("Saldo actual: ",getSaldo(nombre))
                 case 0:
                     ejectar = False
 
